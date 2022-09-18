@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@parcel/config-webextension": "^2.7.0",
+    "@types/webextension-polyfill": "^0.9.1",
+    "webextension-polyfill": "^0.10.0"
+  },
+  "name": "tokopedia-scraper",
+  "description": "https://www.tokopedia.com/order-list?from=2022-09-01&to=2022-09-18&page=1",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel watch src/manifest.json --host localhost --config @parcel/config-webextension",
+    "build": "npx parcel build src/manifest.json --config @parcel/config-webextension",
+    "clean" : "coreutils rm -rf dist"
+  },
+  "keywords": [
+    "tokopedia-scraper"
+  ],
+  "author": "zerosign",
+  "license": "MIT"
+}

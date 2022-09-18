@@ -1,0 +1,32 @@
+#+begin_example
+
+https://www.tokopedia.com/order-list?from=2022-09-01&to=2022-09-18&page=1
+
+order item lists container (returns list of item transactions)
+selector: div[data-testid^=order] 
+
+type of transaction: 
+selector: :parent > section > div > div > div:nth-child(2)
+example: Pulsa
+
+date of transaction: 
+selector: :parent > section > div > div > div:nth-child(3) 
+example: 13 Sep 2022
+
+state of transaction: 
+selector: :parent > section > div > div > div:nth-child(4)
+example: `Berhasil` | `Sedang Dikirim`
+
+name of transaction: 
+selector: :parent > section div.product-details > div > h6
+example: `Indosat 50.000`
+
+transaction ref id: 
+selector: :parent > section > div > div > div:nth-child(5) 
+example: IVR/20220913/XXII/IX/XXXXXXXXXXXX
+
+price: 
+selector: :price > section div.sum-price > div > p:nth-child(2)
+example: Rp49.500
+
+#+end_example

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "tokopedia-scraper",
+  "version": "0.1.0",
+  "permissions": [
+    "activeTabs",
+    "tabs",
+    "clipboardWrite"
+  ],
+  "background": {
+    "service_worker": "index.ts",
+    "type": "module"
+  },
+  "page_action": {
+    "browser_style" : true,
+    "default_title" : "scrap",
+    "default_popup" : "popup/action.html",
+    "show_matches" : ["https://www.tokopedia.com/order-list/*"]
+  },
+  "content_scripts": [{
+    "matches": ["*://github.com/parcel-bundler/*"],
+    "js": ["parcel-content-script.ts"]
+  }]
+}
